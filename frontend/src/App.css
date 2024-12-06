@@ -1,0 +1,130 @@
+/* App.css */
+
+/* Resetowanie domyślnych stylów */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
+/* Stylowanie kontenera aplikacji */
+.App {
+  max-width: 600px;
+  margin: 40px auto;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.App-header {
+  background-color: #007bff;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.App-header h1 {
+  font-size: 24px;
+}
+
+/* Stylowanie głównej sekcji */
+main {
+  padding: 20px;
+}
+
+/* Stylowanie listy zadań */
+.todo-list {
+  list-style: none;
+  margin-top: 20px;
+}
+
+.todo-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fafafa;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.todo-list li:last-child {
+  border-bottom: none;
+}
+
+.todo-list li.completed span {
+  text-decoration: line-through;
+  color: #999;
+}
+
+.todo-list li span {
+  cursor: pointer;
+}
+
+.todo-list li button {
+  background-color: transparent;
+  border: none;
+  color: #dc3545;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.todo-list li button:hover {
+  color: #bd2130;
+}
+
+/* Stylowanie formularza dodawania zadań */
+.add-todo-form {
+  display: flex;
+  margin-top: 20px;
+}
+
+.add-todo-form input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px 0 0 4px;
+}
+
+.add-todo-form button {
+  padding: 10px 20px;
+  background-color: #28a745;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.add-todo-form button:hover {
+  background-color: #218838;
+}
+
+/* Responsywność */
+@media (max-width: 600px) {
+  .App {
+    margin: 20px;
+  }
+
+  .App-header h1 {
+    font-size: 20px;
+  }
+
+  .add-todo-form input[type="text"] {
+    font-size: 14px;
+  }
+
+  .add-todo-form button {
+    font-size: 14px;
+  }
+}
+
+.todo-list li button {
+  transition: color 0.2s;
+}
